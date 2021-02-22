@@ -1,0 +1,19 @@
+{
+  "name": "presentationpage",
+  "version": "1.0.0",
+  "description": "Præsentation af mig og nogle projekter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonas-K-Frank/presentationpage.git"
+  },
+  "author": "Jonas Krat Frank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonas-K-Frank/presentationpage/issues"
+  },
+  "homepage": "https://github.com/Jonas-K-Frank/presentationpage#readme"
+}
