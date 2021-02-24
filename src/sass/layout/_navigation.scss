@@ -1,0 +1,27 @@
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+
+	li {
+		padding: 1.5rem;
+	}
+}
+
+a {
+	color: set-font-color($color-primary);
+	font-size: 1.7rem;
+}
+
+a:hover {
+	color: $color-secondary;
+}
+a:active {
+	color: $color-secondary;
+	text-decoration: underline;
+}

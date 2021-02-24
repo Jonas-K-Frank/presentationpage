@@ -1,7 +1,7 @@
 %btn {
 	display: inline-block;
-	border-radius: 5px;
-	padding: 8px 20px;
+	border-radius: 0.5rem;
+	padding: 0.8rem 2rem;
 	margin: 3px;
 
 	&:hover {
@@ -11,10 +11,10 @@
 
 .btn-primary {
 	@extend %btn;
-	@include set-background(lighten($primary-color, 20%));
+	@include set-background(lighten($color-primary, 20%));
 }
 
 .btn-secondary {
 	@extend %btn;
-	@include set-background($secondary-color);
+	@include set-background($color-secondary);
 }
