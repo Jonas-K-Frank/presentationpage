@@ -1,0 +1,204 @@
+.m-1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.p-1 {
+  Padding: 1rem;
+}
+
+.py-1 {
+  Padding: 1rem 0;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.p-2 {
+  Padding: 2rem;
+}
+
+.py-2 {
+  Padding: 2rem 0;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.p-3 {
+  Padding: 3rem;
+}
+
+.py-3 {
+  Padding: 3rem 0;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.p-4 {
+  Padding: 4rem;
+}
+
+.py-4 {
+  Padding: 4rem 0;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.p-5 {
+  Padding: 5rem;
+}
+
+.py-5 {
+  Padding: 5rem 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-image: linear-gradient(134.39deg, #161618 23.19%, #313132 84.29%);
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100vw;
+  padding: 2rem 10rem 0 10rem;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.showcase {
+  background-color: #161618;
+  color: #fff;
+  height: 90vh;
+  background-image: url(/the-average-tech-guy-0D4vVgznTKE-unsplash.d95438e5.jpg);
+  background-size: cover;
+  background-position: top;
+  /* 	.navigation{
+  	position: fixed;
+  } */
+}
+.showcase .logo {
+  font-family: Basic, sans-serif;
+  font-size: 5rem;
+}
+.showcase-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-top: 40rem;
+}
+.showcase-content h1 {
+  font-family: Basic, sans-serif;
+  font-size: 8rem;
+  line-height: 1.3;
+}
+.showcase-content .underrubrik {
+  font-family: Gothic A1, sans-serif;
+  font-size: 4rem;
+}
+.showcase-content a:hover {
+  color: #f4f4f4;
+}
+.showcase-content a:active {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+ul li {
+  padding: 1.5rem;
+}
+
+a {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+a:hover {
+  color: #efc862;
+}
+
+a:active {
+  color: #efc862;
+  text-decoration: underline;
+}
+
+.btn-secondary, .btn-primary {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.8rem 2rem;
+  margin: 3px;
+}
+.btn-secondary:hover, .btn-primary:hover {
+  transform: scale(0.95);
+}
+
+.btn-primary {
+  background-color: #47474d;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #efc862;
+  color: #fff;
+}
+
+.sektion-om_mig {
+  padding: 15rem;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */
