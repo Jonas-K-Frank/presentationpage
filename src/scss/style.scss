@@ -1,14 +1,9 @@
-@import "diverse/variabler" ;
-@import "diverse/funktioner" ;
-@import "diverse/mixins" ;
-@import "diverse/klasser" ;
+@use "abstracts/index" as * ;
 
-@import "base/base";
-@import "base/utilities";
+@use "base/index" as *;
 
-@import "layout/header";
-@import "layout/navigation";
+@use "layout/index" as *;
 
-@import "components/buttons";
+@use "components/index";
 
-@import "sider/forsiden";
+@use "sider/forsiden";

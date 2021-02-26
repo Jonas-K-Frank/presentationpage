@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 *,
 *::after,
 *::before {
@@ -10,6 +12,7 @@ body {
 	background-image: linear-gradient(134.39deg, #161618 23.19%, #313132 84.29%);;
 	font-family: $font-brod;
 	box-sizing: border-box;
+	color: $color-light;
 }
 img {
 	width: 100%;

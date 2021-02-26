@@ -1,7 +1,0 @@
-
-// sætter baggrunds- og tekstfarven
-
-@mixin set-background($color) {
-    background-color: $color;
-    color: set-font-color($color);
-}

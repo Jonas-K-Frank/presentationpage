@@ -1,3 +1,9 @@
+@use "../abstracts/index" as *;
+.navigation {
+	position: fixed;
+	top: 0;
+	width: 85vw;
+}
 nav {
 	display: flex;
 	align-items: center;

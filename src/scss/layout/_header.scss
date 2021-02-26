@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 .showcase {
 	@include set-background($color-primary);
 	height: 90vh;
@@ -12,6 +14,7 @@
 	.logo {
 		font-family: $font-rubrik;
 		font-size: 5rem;
+		color: #fff;
 	}
 
 	&-content {
@@ -19,17 +22,23 @@
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding-top: 40rem;
+		padding-top: 35rem;
 
 		h1 {
 			font-family: $font-rubrik;
-			font-size: 8rem;
-			line-height: 1.3;
+			font-size: 9rem;
+			line-height: 1;
+		}
+
+		.rubrik-lille{
+			font-family: $font-rubrik;
+			font-size: 6rem;
 		}
 
 		.underrubrik {
 			font-family: $font-mellemrubrik;
 			font-size: 4rem;
+			line-height: 1.6;
 		}
 
 		a:hover {
