@@ -7,22 +7,14 @@
 	background-size: cover;
 	background-position: top;
 
-	/* 	.navigation{
-		position: fixed;
-	} */
 
-	.logo {
-		font-family: $font-rubrik;
-		font-size: 5rem;
-		color: #fff;
-	}
 
 	&-content {
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding-top: 35rem;
+		padding: 40rem 0 0 5rem;
 
 		h1 {
 			font-family: $font-rubrik;
@@ -41,11 +33,5 @@
 			line-height: 1.6;
 		}
 
-		a:hover {
-			color: $color-light;
-		}
-		a:active {
-			text-decoration: none;
-		}
 	}
 }

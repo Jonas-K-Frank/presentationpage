@@ -1,9 +1,9 @@
-@use "abstracts/index" as * ;
+@use "abstracts/index" as *;
 
 @use "base/index" as *;
 
 @use "layout/index" as *;
 
-@use "components/index";
+@use "components/index" as *;
 
-@use "sider/forsiden";
+@use "sider/forsiden"

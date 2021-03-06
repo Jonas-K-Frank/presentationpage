@@ -1,5 +1,4 @@
-
-@use "abstracts/index" as * ;
+@use "abstracts/index" as *;
 
 @use "base/index" as *;
 
@@ -7,6 +6,74 @@
 
 @use "components/index" as *;
 
-.sektion-om_mig{
-    padding: 15rem;
+.content {
+	padding: 5rem;
+}
+.nummer {
+	@include nummer;
+}
+h2 {
+	color: $color-light;
+	font-weight: 400;
+}
+
+.venstre {
+	width: 20vw;
+	display: table-cell;
+}
+.hojre {
+	width: 90vw;
+	display: table-cell;
+}
+
+.sektion-om_mig {
+	display: table;
+	overflow: hidden;
+
+	.indhold {
+		font-size: $default-font-size;
+		-moz-column-count: 2;
+		-moz-column-gap: 4rem;
+		-moz-column-rule: 1px solid $color-secondary;
+
+		column-count: 2;
+		column-gap: 4rem;
+		column-rule: 1px solid $color-secondary;
+		padding-bottom: 10rem;
+
+		hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-webkit-hyphens: auto;
+	}
+}
+
+.sektion-fire_hurtige {
+	display: flex;
+	justify-content: space-between;
+	padding: 5rem;
+	height: 15rem;
+	width: 77vw;
+	margin-left: 31rem;
+	background-color: $color-dark;
+	.forste-hurtige {
+		&__title {
+			font-size: 1.5rem;
+			color: $color-light;
+		}
+		&__forfatter {
+			font-size: 1.3rem;
+		}
+	}
+	h5 {
+		text-transform: uppercase;
+		font-size: 1.7rem;
+		font-weight: 400;
+	}
+}
+
+.sektion-portfolio {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

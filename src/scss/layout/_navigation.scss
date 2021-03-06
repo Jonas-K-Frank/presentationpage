@@ -1,33 +1,72 @@
 @use "../abstracts/index" as *;
+
 .navigation {
 	position: fixed;
 	top: 0;
-	width: 85vw;
-}
-nav {
+	width: 100vw;
+	background: transparent;
+	backdrop-filter: blur(0.8rem);
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-}
+	z-index: 25;
 
-ul {
-	display: flex;
-	list-style-type: none;
+	&__logo {
+		font-family: $font-rubrik;
+		font-size: 5rem;
+		color: #fff;
+		padding-left: 5rem;
 
-	li {
+		@include respond(phone) {
+			font-size: 4rem;
+			padding-left: 2rem;
+		}
+	}
+
+	&__burger-ikon{
+		display: none;
+
+		@include respond(phone){
+			display: inline;
+			margin-right: 2rem;
+			font-size: 4rem;
+		}
+	}
+
+	&__list {
+		display: flex;
+		list-style-type: none;
+		margin-right: 5rem;
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
+
+	&__item {
 		padding: 1.5rem;
 	}
-}
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-light;
+			font-size: 1.7rem;
 
-a {
-	color: set-font-color($color-primary);
-	font-size: 1.7rem;
-}
+			span {
+				@include nummer;
+			}
 
-a:hover {
-	color: $color-secondary;
-}
-a:active {
-	color: $color-secondary;
-	text-decoration: underline;
+			@include respond(phone) {
+				font-size: 2.3rem;
+				line-height: 1.5;
+			}
+		}
+		&:hover,
+		&:active {
+			color: $color-secondary;
+			text-decoration: underline;
+		}
+
+
+	}
+
 }
