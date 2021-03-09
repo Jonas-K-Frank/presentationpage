@@ -37,11 +37,11 @@
 			@content;
 		}
 	}
-	@if $breakpoint == phone {
+/* 	@if $breakpoint == phone {
 		@media only screen and (max-width: 600px) {
 			@content;
 		}
-	}
+	} */
 }
 @mixin clearfix {
 	&::after {

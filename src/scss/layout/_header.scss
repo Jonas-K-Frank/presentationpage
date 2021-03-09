@@ -7,31 +7,63 @@
 	background-size: cover;
 	background-position: top;
 
-
-
 	&-content {
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding: 40rem 0 0 5rem;
+		padding: 30rem 0 0 5rem;
+
+		@include respond(phone) {
+			padding: 10rem 0 0 3rem;
+		}
+		@include respond(tab-port) {
+			padding: 20rem 0 0 3rem;
+		}
+		@include respond(tab-land) {
+			padding: 35rem 0 0 5rem;
+		}
 
 		h1 {
 			font-family: $font-rubrik;
 			font-size: 9rem;
 			line-height: 1;
+
+			@include respond(phone) {
+				font-size: 7rem;
+			}
+			@include respond(tab-land) {
+				font-size: 7rem;
+			}
 		}
 
-		.rubrik-lille{
+		.rubrik-lille {
 			font-family: $font-rubrik;
 			font-size: 6rem;
+
+			@include respond(phone) {
+				font-size: 4rem;
+			}
+			@include respond(tab-land) {
+				font-size: 4rem;
+			}
 		}
 
 		.underrubrik {
 			font-family: $font-mellemrubrik;
 			font-size: 4rem;
 			line-height: 1.6;
-		}
 
+			@include respond(phone) {
+				font-size: 3rem;
+			}
+			@include respond(tab-port) {
+				font-size: 2rem;
+			}
+
+			@include respond(tab-land) {
+				font-size: 3rem;
+			}
+		}
 	}
 }

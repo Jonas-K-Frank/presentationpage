@@ -132,6 +132,11 @@ html {
   color: #f4f4f4;
   font-size: 1.7rem;
   float: left;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 .header li a span {
   color: #efc862;
@@ -139,13 +144,6 @@ html {
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
-  .header li a {
-    display: block;
-    font-size: 2.3rem;
-    line-height: 1.5;
-  }
-}
-@media only screen and (max-width: 600px) {
   .header li a {
     display: block;
     font-size: 2.3rem;
@@ -164,14 +162,13 @@ html {
   font-size: 5rem;
   color: #fff;
   padding-left: 5rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 @media only screen and (max-width: 37.5em) {
-  .header .logo {
-    font-size: 4rem;
-    padding-left: 2rem;
-  }
-}
-@media only screen and (max-width: 600px) {
   .header .logo {
     font-size: 4rem;
     padding-left: 2rem;
@@ -182,16 +179,13 @@ html {
   clear: none;
   float: right;
   max-height: none;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 @media only screen and (max-width: 37.5em) {
-  .header .menu {
-    display: block;
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-  }
-}
-@media only screen and (max-width: 600px) {
   .header .menu {
     display: block;
     clear: both;
@@ -201,18 +195,13 @@ html {
 }
 .header .menu-icon {
   display: none;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 @media only screen and (max-width: 37.5em) {
-  .header .menu-icon {
-    cursor: pointer;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-    display: block;
-  }
-}
-@media only screen and (max-width: 600px) {
   .header .menu-icon {
     cursor: pointer;
     float: right;
@@ -276,29 +265,139 @@ html {
   display: flex;
   align-items: center;
   justify-content: left;
-  padding: 40rem 0 0 5rem;
+  padding: 30rem 0 0 5rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .showcase-content {
+    padding: 10rem 0 0 3rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .showcase-content {
+    padding: 20rem 0 0 3rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .showcase-content {
+    padding: 35rem 0 0 5rem;
+  }
 }
 .showcase-content h1 {
   font-family: Basic, sans-serif;
   font-size: 9rem;
   line-height: 1;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .showcase-content h1 {
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .showcase-content h1 {
+    font-size: 7rem;
+  }
 }
 .showcase-content .rubrik-lille {
   font-family: Basic, sans-serif;
   font-size: 6rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .showcase-content .rubrik-lille {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .showcase-content .rubrik-lille {
+    font-size: 4rem;
+  }
 }
 .showcase-content .underrubrik {
   font-family: Gothic A1, sans-serif;
   font-size: 4rem;
   line-height: 1.6;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .showcase-content .underrubrik {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .showcase-content .underrubrik {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .showcase-content .underrubrik {
+    font-size: 3rem;
+  }
 }
 
 .row {
   max-width: 114rem;
   margin: 0 auto;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 .row:not(:last-child) {
   margin-bottom: 8rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 @media only screen and (max-width: 56.25em) {
   .row:not(:last-child) {
@@ -317,9 +416,19 @@ html {
 }
 .row [class^=col-] {
   float: left;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
 }
 @media only screen and (max-width: 56.25em) {
   .row [class^=col-]:not(:last-child) {
@@ -356,6 +465,7 @@ html {
   border-radius: 0.5rem;
   padding: 0.8rem 2rem;
   margin: 3px;
+  font-size: 1.7rem;
 }
 .btn-secondary:hover, .btn-primary:hover {
   transform: scale(0.95);
@@ -369,6 +479,29 @@ html {
 .btn-secondary {
   background-color: #efc862;
   color: set-font-color(#efc862);
+  color: #f4f4f4;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .btn-secondary {
+    padding: 1rem 2.3rem;
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .btn-secondary {
+    padding: 1rem 2.3rem;
+    font-size: 1.7rem;
+  }
 }
 
 .container {
