@@ -91,6 +91,8 @@ body {
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
   color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -111,93 +113,154 @@ html {
   overflow: auto;
 }
 
-.navigation {
-  position: fixed;
-  top: 0;
-  width: 100vw;
+.header {
   background: transparent;
   backdrop-filter: blur(0.8rem);
-  display: flex;
-  justify-content: space-between;
-  z-index: 25;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
-.navigation__logo {
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.header li a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1.7rem;
+  float: left;
+}
+.header li a span {
+  color: #efc862;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .header li a {
+    display: block;
+    font-size: 2.3rem;
+    line-height: 1.5;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header li a {
+    display: block;
+    font-size: 2.3rem;
+    line-height: 1.5;
+  }
+}
+.header li a:hover,
+.header .header .menu-btn:hover {
+  color: #efc862;
+  text-decoration: underline;
+}
+.header .logo {
+  display: block;
+  float: left;
   font-family: Basic, sans-serif;
   font-size: 5rem;
   color: #fff;
   padding-left: 5rem;
 }
 @media only screen and (max-width: 37.5em) {
-  .navigation__logo {
+  .header .logo {
     font-size: 4rem;
     padding-left: 2rem;
   }
 }
 @media only screen and (max-width: 600px) {
-  .navigation__logo {
+  .header .logo {
     font-size: 4rem;
     padding-left: 2rem;
   }
 }
-.navigation__burger-ikon {
+.header .menu {
+  display: flex;
+  clear: none;
+  float: right;
+  max-height: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .menu {
+    display: block;
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header .menu {
+    display: block;
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+}
+.header .menu-icon {
   display: none;
 }
 @media only screen and (max-width: 37.5em) {
-  .navigation__burger-ikon {
-    display: inline;
-    margin-right: 2rem;
-    font-size: 4rem;
+  .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    display: block;
   }
 }
 @media only screen and (max-width: 600px) {
-  .navigation__burger-ikon {
-    display: inline;
-    margin-right: 2rem;
-    font-size: 4rem;
+  .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    display: block;
   }
 }
-.navigation__list {
-  display: flex;
-  list-style-type: none;
-  margin-right: 5rem;
+.header .menu-icon .nav-icon {
+  background: #f4f4f4;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
 }
-@media only screen and (max-width: 37.5em) {
-  .navigation__list {
-    display: none;
-  }
+.header .menu-icon .nav-icon:before, .header .menu-icon .nav-icon:after {
+  background: #f4f4f4;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
 }
-@media only screen and (max-width: 600px) {
-  .navigation__list {
-    display: none;
-  }
+.header .menu-icon .nav-icon:before {
+  top: 5px;
 }
-.navigation__item {
-  padding: 1.5rem;
+.header .menu-icon .nav-icon:after {
+  top: -5px;
 }
-.navigation__link:link, .navigation__link:visited {
-  color: #f4f4f4;
-  font-size: 1.7rem;
+.header .menu-btn {
+  display: none;
 }
-.navigation__link:link span, .navigation__link:visited span {
-  color: #efc862;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
 }
-@media only screen and (max-width: 37.5em) {
-  .navigation__link:link, .navigation__link:visited {
-    font-size: 2.3rem;
-    line-height: 1.5;
-  }
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
 }
-@media only screen and (max-width: 600px) {
-  .navigation__link:link, .navigation__link:visited {
-    font-size: 2.3rem;
-    line-height: 1.5;
-  }
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
 }
-.navigation__link:hover, .navigation__link:active {
-  color: #efc862;
-  text-decoration: underline;
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 .showcase {

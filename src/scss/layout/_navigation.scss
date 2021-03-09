@@ -1,16 +1,46 @@
 @use "../abstracts/index" as *;
 
-.navigation {
-	position: fixed;
-	top: 0;
-	width: 100vw;
+.header {
 	background: transparent;
 	backdrop-filter: blur(0.8rem);
-	display: flex;
-	justify-content: space-between;
-	z-index: 25;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
 
-	&__logo {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+	}
+
+	li a {
+		
+		padding: 20px 20px;
+		text-decoration: none;
+		color: $color-light;
+		font-size: 1.7rem;
+		float: left;
+
+		span {
+			@include nummer;
+		}
+
+		@include respond(phone) {
+			display: block;
+			font-size: 2.3rem;
+			line-height: 1.5;
+		}
+	}
+	li a:hover,
+	.header .menu-btn:hover {
+		color: $color-secondary;
+		text-decoration: underline;
+	}
+
+	.logo {
+		display: block;
+		float: left;
 		font-family: $font-rubrik;
 		font-size: 5rem;
 		color: #fff;
@@ -22,51 +52,72 @@
 		}
 	}
 
-	&__burger-ikon{
-		display: none;
-
-		@include respond(phone){
-			display: inline;
-			margin-right: 2rem;
-			font-size: 4rem;
-		}
-	}
-
-	&__list {
+	.menu {
 		display: flex;
-		list-style-type: none;
-		margin-right: 5rem;
+		clear: none;
+		float: right;
+		max-height: none;
 
 		@include respond(phone) {
-			display: none;
+			display:block;
+			clear: both;
+			max-height: 0;
+			transition: max-height 0.2s ease-out;
 		}
 	}
 
-	&__item {
-		padding: 1.5rem;
-	}
-	&__link {
-		&:link,
-		&:visited {
-			color: $color-light;
-			font-size: 1.7rem;
+	.menu-icon {
+		display: none;
+		@include respond(phone) {
+			cursor: pointer;
+			float: right;
+			padding: 28px 20px;
+			position: relative;
+			user-select: none;
+			display: block;
+		}
 
-			span {
-				@include nummer;
+		.nav-icon {
+			background: $color-light;
+			display: block;
+			height: 2px;
+			position: relative;
+			transition: background 0.2s ease-out;
+			width: 18px;
+
+			&:before,
+			&:after {
+				background: $color-light;
+				content: "";
+				display: block;
+				height: 100%;
+				position: absolute;
+				transition: all 0.2s ease-out;
+				width: 100%;
 			}
-
-			@include respond(phone) {
-				font-size: 2.3rem;
-				line-height: 1.5;
+			&:before {
+				top: 5px;
+			}
+			&:after {
+				top: -5px;
 			}
 		}
-		&:hover,
-		&:active {
-			color: $color-secondary;
-			text-decoration: underline;
-		}
-
-
 	}
-
+	.menu-btn {
+		display: none;
+	}
+	.menu-btn:checked ~ .menu {
+		max-height: 240px;
+	}
+	.menu-btn:checked ~ .menu-icon .nav-icon {
+		background: transparent;
+	}
+	.menu-btn:checked ~ .menu-icon .nav-icon:before {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+	.menu-btn:checked ~ .menu-icon .nav-icon:after {
+		transform: rotate(45deg);
+		top: 0;
+	}
 }
