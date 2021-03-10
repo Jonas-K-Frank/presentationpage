@@ -615,11 +615,31 @@ h2 {
 .venstre {
   width: 20vw;
   display: table-cell;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .venstre {
+    display: block;
+  }
 }
 
 .hojre {
   width: 90vw;
   display: table-cell;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .hojre {
+    display: block;
+  }
 }
 
 .sektion-om_mig {
@@ -639,6 +659,16 @@ h2 {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 56.25em) {
+  .sektion-om_mig .indhold {
+    column-count: 1;
+  }
 }
 
 .sektion-fire_hurtige {

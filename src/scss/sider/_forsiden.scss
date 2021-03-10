@@ -20,10 +20,18 @@ h2 {
 .venstre {
 	width: 20vw;
 	display: table-cell;
+
+	@include respond(phone) {
+		display: block;
+	}
 }
 .hojre {
 	width: 90vw;
 	display: table-cell;
+
+	@include respond(phone){
+		display: block;
+	}
 }
 
 .sektion-om_mig {
@@ -45,6 +53,10 @@ h2 {
 		-moz-hyphens: auto;
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto;
+
+		@include respond(tab-port) {
+			column-count: 1;
+		}
 	}
 }
 
