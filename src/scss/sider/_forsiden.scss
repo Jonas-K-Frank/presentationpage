@@ -8,54 +8,63 @@
 
 .content {
 	padding: 5rem;
-}
-.nummer {
-	@include nummer;
-}
-h2 {
-	color: $color-light;
-	font-weight: 400;
-}
 
-.venstre {
-	width: 20vw;
-	display: table-cell;
-
-	@include respond(phone) {
-		display: block;
+	.nummer {
+		@include nummer;
 	}
-}
-.hojre {
-	width: 90vw;
-	display: table-cell;
-
-	@include respond(phone){
-		display: block;
+	h2 {
+		color: $color-light;
+		font-weight: 400;
 	}
-}
 
-.sektion-om_mig {
-	display: table;
-	overflow: hidden;
+	.venstre {
+		width: 20vw;
+		display: table-cell;
 
-	.indhold {
-		font-size: $default-font-size;
-		-moz-column-count: 2;
-		-moz-column-gap: 4rem;
-		-moz-column-rule: 1px solid $color-secondary;
+		@include respond(phone) {
+			display: block;
+		}
+	}
 
-		column-count: 2;
-		column-gap: 4rem;
-		column-rule: 1px solid $color-secondary;
-		padding-bottom: 10rem;
+	.sektion-om_mig {
+		display: table;
+		overflow: hidden;
+		padding-top: 10rem;
 
-		hyphens: auto;
-		-moz-hyphens: auto;
-		-ms-hyphens: auto;
-		-webkit-hyphens: auto;
+		.manchet {
+			font-size: 1.9rem;
+			font-style: italic;
+			margin-bottom: 2rem;
+		}
 
-		@include respond(tab-port) {
-			column-count: 1;
+		.indhold {
+			font-size: $default-font-size;
+			-moz-column-count: 2;
+			-moz-column-gap: 4rem;
+			-moz-column-rule: 1px solid $color-secondary;
+
+			column-count: 2;
+			column-gap: 4rem;
+			column-rule: 1px solid $color-secondary;
+			padding-bottom: 10rem;
+
+			hyphens: auto;
+			-moz-hyphens: auto;
+			-ms-hyphens: auto;
+			-webkit-hyphens: auto;
+
+			@include respond(tab-port) {
+				column-count: 1;
+			}
+		}
+
+		.hojre {
+			width: 90vw;
+			display: table-cell;
+
+			@include respond(phone) {
+				display: block;
+			}
 		}
 	}
 }
@@ -66,26 +75,89 @@ h2 {
 	padding: 5rem;
 	height: 15rem;
 	width: 77vw;
-	margin-left: 31rem;
+	margin-left: 18%;
 	background-color: $color-dark;
+
+	@include respond(tab-land) {
+		flex-direction: row;
+		height: 100%;
+		width: 82%;
+	}
+	@include respond(tab-port) {
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+	}
+	@include respond(phone) {
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		margin-left: 1rem;
+	}
 	.forste-hurtige {
 		&__title {
 			font-size: 1.5rem;
 			color: $color-light;
+
+			@include respond(phone) {
+				font-size: 2rem;
+				width: 30rem;
+				margin-left: 25%;
+			}
+
+			@include respond(tab-port) {
+				font-size: 1rem;
+				margin-left: 25%;
+			}
+			@include respond(tab-land) {
+				font-size: 1.5rem;
+			}
 		}
 		&__forfatter {
 			font-size: 1.3rem;
+
+			@include respond(phone) {
+				font-size: 1.8rem;
+				width: 30rem;
+				margin: 0 0 5rem 25%;
+			}
+			@include respond(tab-port) {
+				font-size: 1rem;
+				margin-left: 25%;
+			}
+			@include respond(tab-land) {
+				font-size: 1.3rem;
+			}
 		}
 	}
 	h5 {
 		text-transform: uppercase;
 		font-size: 1.7rem;
 		font-weight: 400;
+
+		@include respond(phone) {
+			font-size: 2.2rem;
+			margin-left: 25%;
+		}
+		@include respond(tab-port) {
+			font-size: 1rem;
+			margin-left: 25%;
+		}
+		@include respond(tab-land) {
+			font-size: 1.4rem;
+		}
 	}
+
 }
+
 
 .sektion-portfolio {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 10rem;
+}
+
+.sektion-footer {
+	height: 1000px;
 }

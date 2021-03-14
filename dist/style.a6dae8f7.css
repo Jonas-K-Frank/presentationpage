@@ -105,6 +105,7 @@ a {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -261,41 +262,18 @@ html {
   background-position: top;
 }
 .showcase-content {
-  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: left;
-  padding: 30rem 0 0 5rem;
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
+  padding: 40rem 0 0 5rem;
+  /* 		@include respond(phone) {
+  			padding: 20% 0 0 3rem;
   		}
-  	} */
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
+  		@include respond(tab-port) {
+  			padding: 20% 0 0 3rem;
   		}
-  	} */
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
-  		}
-  	} */
-}
-@media only screen and (max-width: 37.5em) {
-  .showcase-content {
-    padding: 10rem 0 0 3rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .showcase-content {
-    padding: 20rem 0 0 3rem;
-  }
-}
-@media only screen and (max-width: 75em) {
-  .showcase-content {
-    padding: 35rem 0 0 5rem;
-  }
+  		@include respond(tab-land) {
+  			padding: 30% 0 0 5rem;
+  		} */
 }
 .showcase-content h1 {
   font-family: Basic, sans-serif;
@@ -510,6 +488,16 @@ html {
   position: relative;
   display: flex;
   justify-content: space-between;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .container .card {
@@ -600,19 +588,16 @@ html {
 .content {
   padding: 5rem;
 }
-
-.nummer {
+.content .nummer {
   color: #efc862;
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-
-h2 {
+.content h2 {
   color: #f4f4f4;
   font-weight: 400;
 }
-
-.venstre {
+.content .venstre {
   width: 20vw;
   display: table-cell;
   /* 	@if $breakpoint == phone {
@@ -622,31 +607,21 @@ h2 {
   	} */
 }
 @media only screen and (max-width: 37.5em) {
-  .venstre {
+  .content .venstre {
     display: block;
   }
 }
-
-.hojre {
-  width: 90vw;
-  display: table-cell;
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
-  		}
-  	} */
-}
-@media only screen and (max-width: 37.5em) {
-  .hojre {
-    display: block;
-  }
-}
-
-.sektion-om_mig {
+.content .sektion-om_mig {
   display: table;
   overflow: hidden;
+  padding-top: 10rem;
 }
-.sektion-om_mig .indhold {
+.content .sektion-om_mig .manchet {
+  font-size: 1.9rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+.content .sektion-om_mig .indhold {
   font-size: 1.6rem;
   -moz-column-count: 2;
   -moz-column-gap: 4rem;
@@ -666,8 +641,22 @@ h2 {
   	} */
 }
 @media only screen and (max-width: 56.25em) {
-  .sektion-om_mig .indhold {
+  .content .sektion-om_mig .indhold {
     column-count: 1;
+  }
+}
+.content .sektion-om_mig .hojre {
+  width: 90vw;
+  display: table-cell;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .content .sektion-om_mig .hojre {
+    display: block;
   }
 }
 
@@ -677,26 +666,166 @@ h2 {
   padding: 5rem;
   height: 15rem;
   width: 77vw;
-  margin-left: 31rem;
+  margin-left: 18%;
   background-color: #000;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 75em) {
+  .sektion-fire_hurtige {
+    flex-direction: row;
+    height: 100%;
+    width: 82%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .sektion-fire_hurtige {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-fire_hurtige {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-left: 1rem;
+  }
 }
 .sektion-fire_hurtige .forste-hurtige__title {
   font-size: 1.5rem;
   color: #f4f4f4;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-fire_hurtige .forste-hurtige__title {
+    font-size: 2rem;
+    width: 30rem;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .sektion-fire_hurtige .forste-hurtige__title {
+    font-size: 1rem;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .sektion-fire_hurtige .forste-hurtige__title {
+    font-size: 1.5rem;
+  }
 }
 .sektion-fire_hurtige .forste-hurtige__forfatter {
   font-size: 1.3rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-fire_hurtige .forste-hurtige__forfatter {
+    font-size: 1.8rem;
+    width: 30rem;
+    margin: 0 0 5rem 25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .sektion-fire_hurtige .forste-hurtige__forfatter {
+    font-size: 1rem;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .sektion-fire_hurtige .forste-hurtige__forfatter {
+    font-size: 1.3rem;
+  }
 }
 .sektion-fire_hurtige h5 {
   text-transform: uppercase;
   font-size: 1.7rem;
   font-weight: 400;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-fire_hurtige h5 {
+    font-size: 2.2rem;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .sektion-fire_hurtige h5 {
+    font-size: 1rem;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .sektion-fire_hurtige h5 {
+    font-size: 1.4rem;
+  }
 }
 
 .sektion-portfolio {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10rem;
+}
+
+.sektion-footer {
+  height: 1000px;
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */

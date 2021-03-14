@@ -7,6 +7,11 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    @include respond(phone){
+        flex-direction: column;
+    }
+
 }
 
 .container .card {
