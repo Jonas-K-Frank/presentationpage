@@ -494,9 +494,10 @@ html {
   		}
   	} */
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 75em) {
   .container {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -606,7 +607,7 @@ html {
   		}
   	} */
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
   .content .venstre {
     display: block;
   }
@@ -615,6 +616,16 @@ html {
   display: table;
   overflow: hidden;
   padding-top: 10rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .content .sektion-om_mig {
+    padding-top: 30rem;
+  }
 }
 .content .sektion-om_mig .manchet {
   font-size: 1.9rem;
@@ -694,8 +705,9 @@ html {
 @media only screen and (max-width: 56.25em) {
   .sektion-fire_hurtige {
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
-    width: 100%;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -734,13 +746,14 @@ html {
 }
 @media only screen and (max-width: 56.25em) {
   .sektion-fire_hurtige .forste-hurtige__title {
-    font-size: 1rem;
-    margin-left: 25%;
+    font-size: 2.5rem;
+    margin-left: 33%;
   }
 }
 @media only screen and (max-width: 75em) {
   .sektion-fire_hurtige .forste-hurtige__title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    width: 15rem;
   }
 }
 .sektion-fire_hurtige .forste-hurtige__forfatter {
@@ -770,13 +783,13 @@ html {
 }
 @media only screen and (max-width: 56.25em) {
   .sektion-fire_hurtige .forste-hurtige__forfatter {
-    font-size: 1rem;
-    margin-left: 25%;
+    font-size: 1.6rem;
+    margin: 0 0 5rem 33%;
   }
 }
 @media only screen and (max-width: 75em) {
   .sektion-fire_hurtige .forste-hurtige__forfatter {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 .sektion-fire_hurtige h5 {
@@ -807,25 +820,58 @@ html {
 }
 @media only screen and (max-width: 56.25em) {
   .sektion-fire_hurtige h5 {
-    font-size: 1rem;
-    margin-left: 25%;
+    font-size: 1.5rem;
+    margin-left: 33%;
   }
 }
 @media only screen and (max-width: 75em) {
   .sektion-fire_hurtige h5 {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 }
 
 .sektion-portfolio {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 10rem;
+  align-items: top;
+  margin-top: 5rem;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-portfolio {
+    padding-top: 30rem;
+  }
+}
+
+.sektion-kontakt {
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-kontakt {
+    padding-top: 30rem;
+  }
 }
 
 .sektion-footer {
   height: 1000px;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-footer {
+    padding-top: 30rem;
+  }
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
