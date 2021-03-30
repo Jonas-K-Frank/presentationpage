@@ -586,6 +586,94 @@ html {
   color: #000;
 }
 
+form {
+  max-width: 80vw;
+  text-align: center;
+  margin: 3rem auto;
+}
+form input,
+form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  font-family: Poppins, sans-serif;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 5.3rem;
+  margin-top: 1em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0px 2px #efc862;
+}
+form #input-submit {
+  color: #000;
+  font-size: 2rem;
+  padding: 1rem 4rem;
+  background: #efc862;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 12rem;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  height: 48%;
+  margin-bottom: 1em;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+
+.right {
+  width: 50%;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .right {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+
+.left {
+  margin-right: 2%;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
 .content {
   padding: 5rem;
 }
@@ -673,11 +761,12 @@ html {
 
 .sektion-fire_hurtige {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 5rem;
   height: 15rem;
   width: 77vw;
-  margin-left: 18%;
+  margin: 5rem 32rem;
   background-color: #000;
   /* 	@if $breakpoint == phone {
   		@media only screen and (max-width: 600px) {
@@ -700,6 +789,7 @@ html {
     flex-direction: row;
     height: 100%;
     width: 82%;
+    margin: 5rem 15rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -714,8 +804,45 @@ html {
   .sektion-fire_hurtige {
     flex-direction: column;
     height: 100%;
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+.sektion-fire_hurtige .forste-hurtige h5 {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 400;
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+  /* 	@if $breakpoint == phone {
+  		@media only screen and (max-width: 600px) {
+  			@content;
+  		}
+  	} */
+}
+@media only screen and (max-width: 37.5em) {
+  .sektion-fire_hurtige .forste-hurtige h5 {
+    font-size: 2.2rem;
+    margin: 0 10rem 0;
     width: 100%;
-    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .sektion-fire_hurtige .forste-hurtige h5 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .sektion-fire_hurtige .forste-hurtige h5 {
+    font-size: 1.7rem;
   }
 }
 .sektion-fire_hurtige .forste-hurtige__title {
@@ -741,7 +868,6 @@ html {
   .sektion-fire_hurtige .forste-hurtige__title {
     font-size: 2rem;
     width: 30rem;
-    margin-left: 25%;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -792,43 +918,6 @@ html {
     font-size: 1.5rem;
   }
 }
-.sektion-fire_hurtige h5 {
-  text-transform: uppercase;
-  font-size: 1.7rem;
-  font-weight: 400;
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
-  		}
-  	} */
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
-  		}
-  	} */
-  /* 	@if $breakpoint == phone {
-  		@media only screen and (max-width: 600px) {
-  			@content;
-  		}
-  	} */
-}
-@media only screen and (max-width: 37.5em) {
-  .sektion-fire_hurtige h5 {
-    font-size: 2.2rem;
-    margin-left: 25%;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .sektion-fire_hurtige h5 {
-    font-size: 1.5rem;
-    margin-left: 33%;
-  }
-}
-@media only screen and (max-width: 75em) {
-  .sektion-fire_hurtige h5 {
-    font-size: 1.7rem;
-  }
-}
 
 .sektion-portfolio {
   display: flex;
@@ -843,7 +932,7 @@ html {
 }
 @media only screen and (max-width: 37.5em) {
   .sektion-portfolio {
-    padding-top: 30rem;
+    padding-top: 10rem;
   }
 }
 
@@ -856,8 +945,32 @@ html {
 }
 @media only screen and (max-width: 37.5em) {
   .sektion-kontakt {
-    padding-top: 30rem;
+    padding-top: 10rem;
   }
+}
+.sektion-kontakt .social {
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sektion-kontakt .social a {
+  font-size: 4rem;
+  color: #f4fffe;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.sektion-kontakt .social a:hover {
+  background-color: #efc862;
+  color: white;
+  -webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+  -moz-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+  -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+  transition: background-color 0.6s ease-out, color 0.6s ease-out;
 }
 
 .sektion-footer {
