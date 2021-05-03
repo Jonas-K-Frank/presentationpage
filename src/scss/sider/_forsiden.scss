@@ -161,13 +161,21 @@
 }
 
 .sektion-portfolio {
-	display: flex;
+/* 	display: flex;
 	justify-content: center;
 	align-items: top;
-	margin-top: 5rem;
+	margin-top: 5rem; */
+	padding-bottom: 2rem;
+
 
 	@include respond(phone) {
 		padding-top: 10rem;
+	}
+
+
+	.underrubrik{
+		font-size: 1.3rem;
+		color: $color-light;
 	}
 }
 

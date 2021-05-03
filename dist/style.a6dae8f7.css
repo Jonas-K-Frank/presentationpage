@@ -920,10 +920,11 @@ form textarea {
 }
 
 .sektion-portfolio {
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  margin-top: 5rem;
+  /* 	display: flex;
+  	justify-content: center;
+  	align-items: top;
+  	margin-top: 5rem; */
+  padding-bottom: 2rem;
   /* 	@if $breakpoint == phone {
   		@media only screen and (max-width: 600px) {
   			@content;
@@ -934,6 +935,10 @@ form textarea {
   .sektion-portfolio {
     padding-top: 10rem;
   }
+}
+.sektion-portfolio .underrubrik {
+  font-size: 1.3rem;
+  color: #f4f4f4;
 }
 
 .sektion-kontakt {
