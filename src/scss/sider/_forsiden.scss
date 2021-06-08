@@ -103,24 +103,23 @@
 	}
 
 	.forste-hurtige {
-			
-	h5 {
-		text-transform: uppercase;
-		font-size: 1.7rem;
-		font-weight: 400;
-
-		@include respond(phone) {
-			font-size: 2.2rem;
-			margin: 0 10rem 0;
-			width: 100%;
-		}
-		@include respond(tab-port) {
-			font-size: 1.5rem;
-		}
-		@include respond(tab-land) {
+		h5 {
+			text-transform: uppercase;
 			font-size: 1.7rem;
+			font-weight: 400;
+
+			@include respond(phone) {
+				font-size: 2.2rem;
+				margin: 0 10rem 0;
+				width: 100%;
+			}
+			@include respond(tab-port) {
+				font-size: 1.5rem;
+			}
+			@include respond(tab-land) {
+				font-size: 1.7rem;
+			}
 		}
-	}
 
 		&__title {
 			font-size: 1.5rem;
@@ -156,24 +155,21 @@
 				font-size: 1.5rem;
 			}
 		}
-
-}
+	}
 }
 
 .sektion-portfolio {
-/* 	display: flex;
+	/* 	display: flex;
 	justify-content: center;
 	align-items: top;
 	margin-top: 5rem; */
 	padding-bottom: 2rem;
 
-
 	@include respond(phone) {
 		padding-top: 10rem;
 	}
 
-
-	.underrubrik{
+	.underrubrik {
 		font-size: 1.3rem;
 		color: $color-light;
 	}
