@@ -1,0 +1,46 @@
+.header {
+	grid-column: indhold-start / indhold-slut;
+	grid-row: 1/2;
+
+	display: grid;
+	grid-template-columns: 6rem repeat(4, 1fr);
+	grid-template-rows: 6rem 4rem 1fr;
+	align-items: end;
+
+	background-color: #000;
+	background-image: url(../img/header-baggrund.jpg);
+	background-size: cover;
+	background-position: center;
+
+	&__list {
+		display: flex;
+		font-family: $font-rubrik;
+		text-decoration: none;
+		font-size: 1.4rem;
+		color: $color-light-1;
+
+		&__links {
+			text-transform: uppercase;
+		}
+	}
+	&__underrubrik {
+		grid-row: 4/5;
+		grid-column: 2/-1;
+		font-family: "Gothic A1", sans-serif;
+		font-size: 4.5rem;
+		color: #fffcff;
+	}
+	.btn-secondary {
+		grid-row: 5/5;
+		grid-column: 2/3;
+		width: 24rem;
+		height: 7rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.heading-1 {
+	grid-row: 3/4;
+	grid-column: 2/-1;
+	justify-self: start;
+}

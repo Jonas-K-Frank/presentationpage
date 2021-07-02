@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Gothic+A1", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: [sidebar-start] 12rem [sidebar-end indhold-start] 1fr [indhold-slut];
+  height: 1000px;
+  background-image: linear-gradient(#161618, #313132); }
+
+.btn-secondary {
+  font-family: "Gothic+A1", sans-serif;
+  font-size: 2.5rem;
+  background-color: #efc862;
+  color: #fff;
+  padding: 2rem 4rem;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s; }
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  height: 90vh;
+  background-color: #000;
+  display: grid;
+  grid-template-rows: 8rem 1fr 3rem;
+  justify-items: center;
+  align-items: end; }
+  .sidebar__logotype {
+    font-family: "Basic", sans-serif;
+    font-size: 4.8rem;
+    text-align: center; }
+  .sidebar__logos {
+    grid-row: 5/7;
+    display: flex;
+    flex-direction: column; }
+    .sidebar__logos svg {
+      fill: #fffcfc;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: 1rem; }
+
+.header {
+  grid-column: indhold-start / indhold-slut;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 6rem repeat(4, 1fr);
+  grid-template-rows: 6rem 4rem 1fr;
+  align-items: end;
+  background-color: #000;
+  background-image: url(../img/header-baggrund.jpg);
+  background-size: cover;
+  background-position: center; }
+  .header__list {
+    display: flex;
+    font-family: "Basic", sans-serif;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff; }
+    .header__list__links {
+      text-transform: uppercase; }
+  .header__underrubrik {
+    grid-row: 4/5;
+    grid-column: 2/-1;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 4.5rem;
+    color: #fffcff; }
+  .header .btn-secondary {
+    grid-row: 5/5;
+    grid-column: 2/3;
+    width: 24rem;
+    height: 7rem;
+    margin-bottom: 2rem; }
+
+.heading-1 {
+  grid-row: 3/4;
+  grid-column: 2/-1;
+  justify-self: start; }
+
+.heading-1 {
+  font-family: "Basic", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  text-align: center;
+  font-size: 7rem;
+  color: #fffafa;
+  line-height: 1; }

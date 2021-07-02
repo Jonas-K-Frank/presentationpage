@@ -9,12 +9,7 @@
 			href="https://fonts.googleapis.com/css2?family=Basic&family=Gothic+A1:wght@200;400&family=Poppins:wght@300;400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-		<link rel="stylesheet" href="scss/style.scss" />
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
-			rel="stylesheet"
-		/>
+		<link rel="stylesheet" href="css/style.css" />
 		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
 		<title>Jonas Krat Frank. It's all about the web</title>
@@ -22,38 +17,39 @@
 
 	<body class="container">
 
-		<div class="sidebar"></div>
+		<div class="sidebar">
+			<div class="sidebar__logotype">JKF</div>
+			<div class="sidebar__logos">
+				<svg class="icon">
+					<use xlink:href="img/sprite.svg#433-github"></use>
+				  </svg><svg class="icon">
+					<use xlink:href="img/sprite.svg#407-twitter"></use>
+				  </svg><svg class="icon">
+					<use xlink:href="img/sprite.svg#459-linkedin2"></use>
+				  </svg>
+			</div>
+		</div>
+
 		<header class="header">
-			<a href="/" class="logo">JKF</a>
-			<input class="menu-btn" type="checkbox" id="menu-btn" />
-			<label class="menu-icon" for="menu-btn"
-				><span class="nav-icon"></span
-			></label>
-			<ul class="menu">
-				<li>
-					<a href="#ommig"><span>01</span> om mig</a>
+
+			<ul class="header__list">
+				<li class="header__links">
+					<a href="#ommig"><span class="yellow">01</span> om mig</a>
 				</li>
-				<li>
-					<a href="#portfolio"><span>02</span> jeg arbejder på...</a>
+				<li class="header__links">
+					<a href="#portfolio"><span class="yellow">02</span> jeg arbejder på...</a>
 				</li>
-				<li>
-					<a href="#kontakt"><span>03</span> kontakt</a>
+				<li class="header__links">
+					<a href="#kontakt"><span class="yellow">03</span> kontakt</a>
 				</li>
 			</ul>
-		</header>
+	
 
-		<section class="showcase">
-			<div class="container">
-				<div class="showcase-content">
-					<div>
-						<h1>Webmaster</h1>
-						<span class="rubrik-lille">med eCommerce erfaring</span>
-						<p class="my-1 underrubrik">Jonas Krat Frank</p>
-						<a href="#" class="btn-secondary">Læs mere</a>
-					</div>
-				</div>
-			</div>
-		</section>
+		
+						<h1 class="heading-1">Webmaster med eCommerce erfaring</h1>
+						<p class="header__underrubrik">Jonas Krat Frank</p>
+						<button class="btn-secondary">Læs mere</button>
+		</header>
 
 		<div class="content">
 			<section class="sektion-om_mig" id="ommig">
@@ -113,72 +109,7 @@ Jeg er en initiativrig og resultatorienteret person med et stort engagement, med
 			</section> -->
 
 			<section class="sektion-portfolio" id="portfolio">
-				<div class="nummer venstre">
-					/ 02
-					<h2>jeg arbejder på...</h2>
-					<div class="underrubrik">Her er et sneek peak på de ting jeg arbejder på lige nu.</div>
-				</div>
-				<div class="container">
-					
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<img
-									src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true"
-								/>
-								<h3>Denne side</h3>
-							</div>
-						</div>
-						<div class="face face2">
-							<div class="content">
-								<p>
-									Jeg har valgt at lave denne side i udelukkende HTML og CSS
-								</p>
-								<a href="#popup-1">Læs mere</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<img
-									src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true"
-								/>
-								<h3>Bourbon app</h3>
-							</div>
-						</div>
-						<div class="face face2">
-							<div class="content">
-								<p>
-									Et projekt der skal hjælpe med at finde priser og forhandlere
-									af bourbon
-								</p>
-								<a href="#popup-2">Læs mere</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<img
-									src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true"
-								/>
-								<h3>Rejseblog</h3>
-							</div>
-						</div>
-						<div class="face face2">
-							<div class="content">
-								<p>
-									For også at lære JAM stack at kende er jeg igang med at lave
-									en rejseblog
-								</p>
-								<a href="#popup-3">Læs mere</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 			</section>
 <section class="sektion-kontakt" id="kontakt">
 	<div class="nummer venstre">

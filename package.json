@@ -4,21 +4,24 @@
   "description": "Præsentation af mig og nogle projekter",
   "main": "index.js",
   "scripts": {
-   	"dev": "parcel src/index.html",
-		"build": "parcel build src/index.html"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jonas-K-Frank/presentationpage.git"
-  },
-  "author": "Jonas Krat Frank",
+  "author": "Jonas",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Jonas-K-Frank/presentationpage/issues"
-  },
-  "homepage": "https://github.com/Jonas-K-Frank/presentationpage#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.32.8"
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^8.3.1"
+  },
+  "dependencies": {
+    "live-server": "^1.1.0"
   }
 }

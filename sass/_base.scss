@@ -1,0 +1,51 @@
+// FARVEVARIABLER
+$color-primary: #1b1a1c;
+
+$color-secondary: #efc862;
+
+$color-light-1: #fff;
+$color-light-2: #fffcfc;
+
+// FONT VARIABLER
+$font-rubrik: "Basic", sans-serif;
+$font-brod: "Gothic+A1", sans-serif;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+	font-family: $font-brod;
+	color: $color-light-1;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: [sidebar-start]12rem [sidebar-end indhold-start] 1fr[indhold-slut];
+
+	height: 1000px;
+	background-image: linear-gradient(rgba(22, 22, 24, 1), rgba(49, 49, 50, 1));
+}
+
+.btn-secondary {
+	font-family: $font-brod;
+	font-size: 2.5rem;
+	background-color: $color-secondary;
+	color: #fff;
+	padding: 2rem 4rem;
+	border-radius: 0.2rem;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s;
+}
