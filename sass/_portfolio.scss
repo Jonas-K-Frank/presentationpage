@@ -1,0 +1,17 @@
+.portfolio {
+	grid-column: indhold-start / indhold-slut;
+	grid-row: 4/5;
+
+	display: grid;
+	grid-template-columns: 9rem 12rem repeat(2, 40vw) 6rem;
+	grid-template-rows: 10rem auto;
+
+	border-left: 1px solid $color-grey-2;
+
+	&__top {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		margin-top: 10rem;
+		margin-left: 1rem;
+	}
+}

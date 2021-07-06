@@ -6,9 +6,15 @@ $color-secondary: #efc862;
 $color-light-1: #fff;
 $color-light-2: #fffcfc;
 
+$color-grey-1: #a1a1a1;
+$color-grey-2: #707070;
+
+$baggrund-nav: rgba(255, 255, 255, 0.5);
+
 // FONT VARIABLER
 $font-rubrik: "Basic", sans-serif;
 $font-brod: "Gothic+A1", sans-serif;
+$font-alternativ: "Poppins", sans-serif;
 
 *,
 *::before,
@@ -31,10 +37,9 @@ body {
 
 .container {
 	display: grid;
-	grid-template-rows: repeat(6, 1fr);
+	grid-template-rows: 90vh min-content repeat(6, 20rem);
 	grid-template-columns: [sidebar-start]12rem [sidebar-end indhold-start] 1fr[indhold-slut];
 
-	height: 1000px;
 	background-image: linear-gradient(rgba(22, 22, 24, 1), rgba(49, 49, 50, 1));
 }
 

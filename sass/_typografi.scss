@@ -9,3 +9,34 @@
 	color: #fffafa;
 	line-height: 1;
 }
+.heading-2 {
+	@extend %heading;
+	text-align: left;
+	font-size: 2rem;
+	color: #fffafa;
+	line-height: 1;
+}
+.heading-5 {
+	@extend %heading;
+	text-align: left;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	color: #fffafa;
+	line-height: 1;
+}
+.mellemrubrik {
+	font-family: $font-brod;
+	font-weight: bold;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	margin-top: 1rem;
+}
+.brodtekst {
+	font-family: $font-brod;
+	font-size: 1rem;
+	line-height: 1.2;
+}
+.yellow {
+	color: $color-secondary;
+	font-size: 1.7rem;
+}
