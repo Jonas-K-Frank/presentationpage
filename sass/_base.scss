@@ -1,3 +1,6 @@
+@use "typografi" as *;
+@forward "base";
+
 // FARVEVARIABLER
 $color-primary: #1b1a1c;
 
@@ -10,11 +13,6 @@ $color-grey-1: #a1a1a1;
 $color-grey-2: #707070;
 
 $baggrund-nav: rgba(255, 255, 255, 0.5);
-
-// FONT VARIABLER
-$font-rubrik: "Basic", sans-serif;
-$font-brod: "Gothic+A1", sans-serif;
-$font-alternativ: "Poppins", sans-serif;
 
 *,
 *::before,
@@ -33,24 +31,46 @@ body {
 	color: $color-light-1;
 	font-weight: 300;
 	line-height: 1.6;
-}
-
-.container {
-	display: grid;
-	grid-template-rows: 90vh min-content repeat(6, 20rem);
-	grid-template-columns: [sidebar-start]12rem [sidebar-end indhold-start] 1fr[indhold-slut];
-
 	background-image: linear-gradient(rgba(22, 22, 24, 1), rgba(49, 49, 50, 1));
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: [sidebar-start] 8rem [sidebar-stop navigation-start] 5rem [navigation-slut header-start] 90vh [header-slut kap1-start] 1fr [kap1-slut kap2-start] 1fr [kap2-slut kap3-start] 1fr [kap3-slut kontakt-start] 1fr [kontakt-slut footer-start] 1fr [footer-slut];
 }
 
-.btn-secondary {
-	font-family: $font-brod;
-	font-size: 2.5rem;
-	background-color: $color-secondary;
-	color: #fff;
-	padding: 2rem 4rem;
-	border-radius: 0.2rem;
-	border: none;
-	cursor: pointer;
-	transition: all 0.2s;
+/* @media screen and (min-width: 600px) {
+	body {
+		grid:
+			"aside nav" 5em
+			"aside    main  " 20em
+			"main  main " 10em
+			"footer footer" 5em /
+			1fr 2fr;
+	}
 }
+
+@media screen and (min-width: 800px) {
+	body {
+		grid:
+			"header header header" 5em
+			"nav    main   aside " 20em
+			"footer footer footer" 5em /
+			1fr 2fr 1fr;
+	}
+}
+
+nav {
+	grid-area: nav;
+}
+header {
+	grid-area: header;
+}
+main {
+	grid-area: main;
+}
+aside {
+	grid-area: aside;
+}
+footer {
+	grid-area: footer;
+} */

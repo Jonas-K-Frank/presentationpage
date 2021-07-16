@@ -1,0 +1,43 @@
+.header {
+/* 	grid-column: indhold-start / indhold-slut;
+	grid-row: 1/2; */
+
+	display: grid;
+	grid-template-columns: 6rem repeat(4, 1fr);
+	grid-template-rows: 6rem 4rem 1fr;
+	align-items: end;
+
+	background-color: #000;
+	background-image: url(../img/header-baggrund.jpg);
+	background-size: cover;
+	background-position: center;
+
+
+
+
+	.btn-secondary {
+		grid-row: 5/5;
+		grid-column: 2/3;
+
+		width: 24rem;
+		height: 7rem;
+
+		display: inline-block;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1.5rem 4rem;
+		border-radius: 1rem;
+		transition: all 0.2s;
+		position: relative;
+		font-size: 1.6rem;
+		border: none;
+		cursor: pointer;
+		margin-bottom: 2rem;
+	}
+}
+
+.heading-1 {
+	grid-row: 3/4;
+	grid-column: 2/-1;
+	justify-self: start;
+}

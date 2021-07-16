@@ -1,0 +1,50 @@
+.navigation {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+
+
+
+    @media screen and (min-width: 600px) {
+
+  
+    display: grid;
+    grid-template-columns: 7rem repeat(3, 1fr) 3rem;
+    backdrop-filter: blur(1rem);
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 7rem;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+
+    
+&__list {
+    grid-column: 4 / span 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+
+    list-style: none;
+}
+
+&__links::hover {
+    color: blue;
+}
+&__link:link,
+&__link:visited {
+    font-family: $font-rubrik;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: $color-light-1;
+}
+&__underrubrik {
+    grid-row: 4/5;
+    grid-column: 2/-1;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 4.5rem;
+    color: #fffcff;
+}
+}
+}

@@ -1,0 +1,126 @@
+.portfolio {
+	grid-column: indhold-start / indhold-slut;
+	grid-row: 4/5;
+	align-items: top;
+	display: grid;
+	grid-template-columns: 7rem 13.4rem 1fr 6rem;
+	border-left: 1px solid $color-grey-2;
+
+	&__top {
+		grid-column: 1/2;
+		margin-left: 1rem;
+	}
+
+	&__kort {
+		grid-column: 3 / 7;
+
+		/* 		display: grid;
+		grid-template-columns: repeat(4, minmax(25rem, 1fr));
+		justify-items: center;
+		align-items: center; */
+
+		.kort-container {
+			grid-column: 1/2;
+			/* 			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 1.5rem; */
+
+			/* 			display: grid;
+			grid-template-columns: repeat(4, minmax(25rem, 1fr));
+			justify-items: center;
+			align-items: center; */
+
+			width: 90vw;
+			margin-right: 6rem;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.kort-container .card {
+			position: relative;
+			cursor: pointer;
+		}
+
+		.kort-container .card .face {
+			width: 30rem;
+			height: 20rem;
+			transition: 0.5s;
+		}
+
+		.kort-container .card .face.face1 {
+			position: relative;
+			background: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			transform: translateY(10rem);
+		}
+
+		.kort-container .card:hover .face.face1 {
+			background: $color-secondary;
+			transform: translateY(0);
+		}
+
+		.kort-container .card .face.face1 .content {
+			opacity: 0.2;
+			transition: 0.5s;
+		}
+
+		.kort-container .card:hover .face.face1 .content {
+			opacity: 1;
+		}
+
+		.kort-container .card .face.face1 .content img {
+			max-width: 10rem;
+		}
+
+		.kort-container .card .face.face1 .content h3 {
+			margin: 1rem 0 0;
+			padding: 0;
+			color: $color-light-1;
+			text-align: center;
+			font-size: 2rem;
+		}
+
+		.kort-container .card .face.face2 {
+			position: relative;
+			background: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 2rem;
+			box-sizing: border-box;
+			box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+			transform: translateY(-100px);
+		}
+
+		.kort-container .card:hover .face.face2 {
+			transform: translateY(0);
+		}
+
+		.kort-container .card .face.face2 .content p {
+			/*   margin: 0;
+            padding: 0; */
+
+			font-size: 1.6rem;
+			color: $color-primary;
+		}
+
+		.kort-container .card .face.face2 .content a {
+			margin: 1.5rem 0 0;
+			display: inline-block;
+			text-decoration: none;
+			font-weight: 900;
+			color: #333;
+			padding: 0.5rem;
+			border: 1px solid $color-primary;
+		}
+
+		.kort-container .card .face.face2 .content a:hover {
+			background: $color-secondary;
+			color: $color-primary;
+		}
+	}
+}
